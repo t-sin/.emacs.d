@@ -23,6 +23,10 @@
 
 
 
+;;;; minimap
+(auto-install-package 'minimap)
+
+
 ;;;; フォントとウィンドウ
 
 ;; フレームサイズ(文字数)

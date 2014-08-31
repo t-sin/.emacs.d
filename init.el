@@ -48,13 +48,6 @@
 ;; AnthyのIM切り替えキーからCtrl-Spaceを消せばおk
 
 
-;;;;外観の設定
-(load "appearance")
-
-;; https://github.com/dengste/minimap
-;(require 'minimap)
-
-
 ;;;; package.el
 (require 'package)
 (add-to-list 'package-archives
@@ -70,6 +63,10 @@
 (defun auto-install-packages (pkgs)
   (dolist (p pkgs)
     (auto-install-package p)))
+
+
+;;;;外観の設定
+(load "appearance")
 
 
 ;;;; メジャーモード
