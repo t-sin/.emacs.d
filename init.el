@@ -4,7 +4,7 @@
 ;;;; 基本設定
 
 ;; ロードパスの設定
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/conf")
 
 ;; 言語を日本語に
 ;(set-language-environment "Japanese")
