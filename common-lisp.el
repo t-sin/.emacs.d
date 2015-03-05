@@ -9,11 +9,11 @@
 
 ;; Common Lisp 処理系の設定
 (setq slime-lisp-implementations
-      '((ccl ("~/bin/ccl")) ; Clozure CL
-        (ecl ("~/bin/ecl")) ; Embedded CL
-        (sbcl ("~/bin/sbcl") ; SBCL
-              :coding-system utf-8-unix
-              :env ("SBCL_HOME=~/opt/sbcl-1.1.13/lib/sbcl"))))
+      '((sbcl ("~/.cim/bin/sbcl"))
+        (ccl ("~/.cim/bin/ccl"))
+        (ecl ("~/.cim/bin/ecl"))
+        (clisp ("~/.cim/bin/clisp"))
+        (abcl ("~/.cim/bin/abcl"))))
 
 
 (require 'slime)
