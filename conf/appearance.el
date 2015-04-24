@@ -9,7 +9,7 @@
 
 ;; 左側に行番号表示
 (require 'linum)
-(global-linum-mode t)
+;(global-linum-mode t)
 (setq linum-format "%5d ")
 
 ;; 選択範囲に色を付ける
