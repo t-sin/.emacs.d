@@ -17,7 +17,7 @@
 (setq inhibit-startup-message t)
 
 ;; オートセーブ
-;(auto-save-mode nil)
+(auto-save-mode t)
 
 ;; 終了時のオートセーブファイル削除
 ;(setq delete-auto-save-files t)
@@ -86,6 +86,11 @@
 ;;;; paredit.el
 (auto-install-package 'paredit)
 (require 'paredit)
+
+;;;; auto-complete.el
+(auto-install-package 'auto-complete)
+(require 'auto-complete-config)
+(ac-config-default)
 
 ;;; 各メジャーモードでparedit
 ;; Emacs Lisp
