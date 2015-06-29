@@ -51,7 +51,7 @@
 ;;;; package.el
 (require 'package)
 (add-to-list 'package-archives
-             '("marmalade" . "http://marmalade-repo.org/packages/"))
+             '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
 ;;; パッケージの自動インストール
