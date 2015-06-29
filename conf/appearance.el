@@ -41,8 +41,7 @@
 (setq font-en "Ricty")
 
 ;; 和文フォント
-(setq font-jp "HC Maru Gothic")
-;(setq font-jp "Ricty")
+(setq font-jp "Ricty")
 ;(setq font-jp "Ume Mincho")
 
 
