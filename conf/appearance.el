@@ -68,14 +68,11 @@
       frame-size)
 
 
+
 ;;;; colour scheme
+;; sublime themes
+(auto-install-package 'sublime-themes)
 
-;; 選択範囲の色
-(set-face-background 'region "SkyBlue")
-(set-face-foreground 'region "black")
-
-;; https://github.com/owainlewis/emacs-color-themes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 (when window-system
   (load-theme 'spolsky t))
 
