@@ -3,13 +3,13 @@
 
 
 ;;;; packages for package.el
-(defvar cl-packages '(ac-slime))
+(defvar cl-packages '(slime
+                      ac-slime))
 
 (auto-install-packages cl-packages)
 
 
 ;;;; slime
-(add-to-list 'load-path "~/opt/el-systems/slime/")
 (require 'slime)
 
 ;; 文字コード設定
