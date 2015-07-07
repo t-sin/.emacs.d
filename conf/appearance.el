@@ -24,7 +24,12 @@
 
 
 ;;;; minimap
-(auto-install-package 'minimap)
+;;;; to enable minimap: M-x siblimity-map
+(auto-install-package 'sublimity)
+(require 'sublimity)
+(require 'sublimity-map)
+(sublimity-map-set-delay 0)
+
 
 
 ;;;; フォントとウィンドウ
