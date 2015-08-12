@@ -9,8 +9,14 @@
 (auto-install-packages cl-packages)
 
 
+;;;; paredit-mode
+(add-hook 'lisp-mode 'pareid-mode)
+(add-hook 'lisp-interaction-mode-hook 'pareid-mode)
+
 ;;;; slime
 (require 'slime)
+
+(add-hook 'slime-repl-mode-hook 'pareid-mode)
 
 ;; 文字コード設定
 (setq slime-net-coding-system 'utf-8-unix)
