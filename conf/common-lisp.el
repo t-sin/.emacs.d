@@ -23,8 +23,8 @@
 
 ;; Common Lisp 処理系の設定
 (setq slime-lisp-implementations
-      '((sbcl ("~/.cim/bin/sbcl"))
-        (ccl ("~/.cim/bin/ccl"))
+      '((sbcl ("ros" "-l" "sbcl" "-Q" "run"))
+        (ccl ("ros" "-l" "ccl" "-Q" "run"))
         (ecl ("~/.cim/bin/ecl"))
         (clisp ("~/.cim/bin/clisp"))
         (abcl ("~/.cim/bin/abcl"))))
