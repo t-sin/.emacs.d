@@ -10,11 +10,6 @@
 (require 'auto-complete-config)
 (ac-config-default)
 
-;;;; popwin.el
-(auto-install-package 'popwin)
-(require 'popwin)
-(popwin-mode 1)
-
 
 ;;; 各メジャーモードでparedit
 ;; Emacs Lisp
