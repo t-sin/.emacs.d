@@ -38,4 +38,5 @@
 ;;; Haskell
 (load "haskell")
 
-
+;;; Python
+(load "python")
