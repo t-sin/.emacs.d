@@ -65,23 +65,8 @@
     (auto-install-package p)))
 
 
-;;;; メジャーモード
-
-;;; markdown-mode
-(auto-install-package 'markdown-mode)
-(autoload 'markdown-mode "markdown-mode"
-  "Major mode for editing Markdown files" t)
-
-(add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
-
-;;; yaml-mode
-(auto-install-package 'yaml-mode)
-(autoload 'yaml-mode "yaml-mode"
-  "Major mode for editing YAML files" t)
-
-(add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+;;;; common settings
+(load "common")
 
 ;;;; 外観の設定
 (load "appearance")
