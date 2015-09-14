@@ -44,6 +44,9 @@
 ;;;; keys: ex; C-x M-x a -> "\C-x\A-xa"
 ;;;; definition: func
 
+;; C-hでbackspace
+(keyboard-translate ?\C-h ?\C-?)
+
 ;; C-spaceでmark set
 ;; AnthyのIM切り替えキーからCtrl-Spaceを消せばおk
 
