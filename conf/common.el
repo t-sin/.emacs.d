@@ -1,6 +1,10 @@
 ;;;; common settings
 
 
+;;;; PATH from shell
+(auto-install-package 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
+
 ;;;; popwin.el
 (auto-install-package 'popwin)
 (require 'popwin)
