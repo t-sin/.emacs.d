@@ -29,6 +29,11 @@
 
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
+;;; json-mode
+(auto-install-package 'json-mode)
+(autoload 'json-mode "json-mode"
+  "majort mode for editing json" t)
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
 ;;;; swoop
 (auto-install-package 'swoop)
