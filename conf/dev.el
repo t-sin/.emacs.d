@@ -1,6 +1,10 @@
 ;;;; configurations for development
 
 
+;;;; flycheck
+(auto-install-package 'flycheck)
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
 ;;;; paredit.el
 (auto-install-package 'paredit)
 (require 'paredit)
