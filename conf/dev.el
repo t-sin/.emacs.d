@@ -44,3 +44,6 @@
 
 ;;; Python
 (load "python")
+
+;;; JavaScript
+(load "js")
