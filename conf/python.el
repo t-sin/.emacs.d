@@ -1,7 +1,8 @@
 ;;;; Python
 
 
-(defvar python-packages '(python-mode))
+(defvar python-packages '(python-mode
+                          flycheck-pyflakes))
 (auto-install-packages python-packages)
 
 (autoload 'python-mode "python-mode" "python editting mode." t)
