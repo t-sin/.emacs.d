@@ -2,8 +2,12 @@
 
 
 ;;;; flycheck
-(auto-install-package 'flycheck)
+(auto-install-packages '(flycheck
+                         flycheck-pos-tip))
 (add-hook 'after-init-hook #'global-flycheck-mode)
+(eval-after-load 'flycheck
+  '(custom-set-variables
+    '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
 
 ;;;; paredit.el
 (auto-install-package 'paredit)
