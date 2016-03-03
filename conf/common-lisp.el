@@ -13,6 +13,7 @@
 (add-hook 'lisp-mode 'paredit-mode)
 (add-hook 'lisp-interaction-mode-hook 'paredit-mode)
 
+
 ;;;; slime
 (require 'slime)
 
@@ -23,11 +24,13 @@
 
 ;; Common Lisp 処理系の設定
 (setq slime-lisp-implementations
-      '((sbcl ("ros" "-L" "sbcl-bin" "-Q" "run"))
-        (ccl ("ros" "-L" "ccl-bin" "-Q" "run"))
+      '((ros ("ros" "-Q" "run"))
+        (ccl ("~/.cim/bin/ccl"))
+        (sbcl ("~/.cim/bin/sbcl"))
         (ecl ("~/.cim/bin/ecl"))
         (clisp ("~/.cim/bin/clisp"))
-        (abcl ("~/.cim/bin/abcl"))))
+        (abcl ("~/.cim/bin/abcl"))
+        (allegro ("~/.cim/bin/alisp"))))
 
 (setq slime-contribs '(slime-fancy))
 (slime-setup)
