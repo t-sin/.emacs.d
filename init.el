@@ -68,8 +68,8 @@
     (auto-install-package p)))
 
 
-;;;; common settings
-(load "common")
+;;;; basic config
+(load "basic")
 
 ;;;; 外観の設定
 (load "appearance")
