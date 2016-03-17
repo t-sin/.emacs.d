@@ -22,16 +22,6 @@
 (tool-bar-mode 0)
 
 
-
-;;;; minimap
-;;;; to enable minimap: M-x siblimity-map
-(auto-install-package 'sublimity)
-(require 'sublimity)
-(require 'sublimity-map)
-(sublimity-map-set-delay 0)
-
-
-
 ;;;; フォントとウィンドウ
 
 ;; フレームサイズ(文字数)
@@ -71,7 +61,6 @@
 ;; 起動時のウィンドウサイズ（文字数）
 (setq initial-frame-alist
       frame-size)
-
 
 
 ;;;; colour scheme
