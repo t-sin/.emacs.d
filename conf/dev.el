@@ -21,15 +21,11 @@
 (ac-config-default)
 
 
-;; ファイルの拡張子とメジャーモードの対応付け
-;(setq auto-mode-alist
-;	  (cons (cons "\\.ext$" 'major-mode) auto-mode-alist))
-;; Common Lisp用
-;;(setq auto-mode-alist
-;;	  (cons (cons "\\.cl$" 'lisp-mode) auto-mode-alist))
+;; files and major modes
+; (setq auto-mode-alist
+;       (cons (cons "\\.ext$" 'major-mode) auto-mode-alist))
 
 
-;;;; 各言語別設定
 ;;; Common Lisp
 (load "common-lisp")
 
