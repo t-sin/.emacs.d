@@ -1,5 +1,4 @@
-;;;; settings for OS X
-;;;; please load this file in init.el
+;;;; config for OS X
 
 
 ;;; SKK
@@ -17,9 +16,11 @@
                            (skk-isearch-mode-setup)))))
 (add-hook 'isearch-mode-end-hook
           (function (lambda ()
-                      (and (boundp 'skk-mode) skk-mode (skk-isearch-mode-cleanup))
-                      (and (boundp 'skk-mode-invoked) skk-mode-invoked
+                      (and (boundp 'skk-mode)
+                           skk-mode
+                           (skk-isearch-mode-cleanup))
+                      (and (boundp 'skk-mode-invoked)
+                           skk-mode-invoked
                            (skk-set-cursor-properly)))))
-
 
 (setq mac-pass-control-to-system nil)
