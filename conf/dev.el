@@ -21,10 +21,6 @@
 (ac-config-default)
 
 
-;; Clojure
-(add-hook 'clojure-mode-hook 'enacs-paredit-mode)
-
-
 ;; ファイルの拡張子とメジャーモードの対応付け
 ;(setq auto-mode-alist
 ;	  (cons (cons "\\.ext$" 'major-mode) auto-mode-alist))
