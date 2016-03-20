@@ -19,6 +19,12 @@
 (cua-mode t)
 (setq cua-enable-cua-keys nil)
 
+;; selection area with color
+(transient-mark-mode)
+
+;; show correspond paren
+(show-paren-mode)
+
 ;;; keybinding syntax
 ;;; sypnosis: (define-key keymap keys definition)
 ;;; keymap: global-map, xxx-mode-map...
