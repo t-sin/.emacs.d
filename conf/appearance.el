@@ -1,76 +1,58 @@
-;;;; settings for appearance
-;;;; please load this file in init.el
+;;;; appearance
 
 
-;;;; 基本設定
+(tool-bar-mode 0)
 
-;; 行番号表示（下のエリアに"L1"の形で）
+
+;; line number in mode line
 (line-number-mode t)
 
-;; 左側に行番号表示
+;; line number on left of buffer
 (require 'linum)
 ;(global-linum-mode t)
 (setq linum-format "%5d ")
 
-;; 選択範囲に色を付ける
-(setq transient-mark-mode t)
+;; selection area with color
+(transient-mark-mode)
 
-;; 対応する括弧を光らせる
 (show-paren-mode)
 
-;; メニューバー（アイコンのほう）をかくす
-(tool-bar-mode 0)
 
-
-;;;; フォントとウィンドウ
-
-;; フレームサイズ(文字数)
+;;; fonts and frames
 (setq frame-size 
       '((width . 100) (height . 45)))
-
-;; フォントサイズ
-(setq font-size 12.5)
-0
-;; 欧文フォント
-;(setq font-en "Ubuntu Mono")
 (setq font-en "Ricty")
-
-;; 和文フォント
 (setq font-jp "Ricty")
-;(setq font-jp "Ume Mincho")
-
+(setq font-size 12.5)
 
 (defun set-fonts (size jp &optional en)
   (when window-system
-    ;; 欧文フォント設定
+    ;; English font
     (set-face-attribute
      'default nil
      :family en
      :height (truncate (* 10 size)))
-    ;; 和文フォント設定
+    ;; Japanese font
     (set-fontset-font
      (frame-parameter nil 'font)
      'japanese-jisx0208
      (cons jp "unicode-bmp"))
-    ;; 全角半角比
+    ;; en-jp font size ratio
     (setq face-font-rescale-alist
-          '(((concat ".*" jp ".*" . 1.2))))))
+          '(((concat ".*" jp ".*" . 1))))))
 
 (set-fonts font-size font-jp font-en)
 
-;; 起動時のウィンドウサイズ（文字数）
-(setq initial-frame-alist
-      frame-size)
+(setq initial-frame-alist frame-size)
 
 
-;;;; colour scheme
-;; sublime themes
+;;; colour scheme
 (auto-install-package 'sublime-themes)
 
 (when window-system
   (load-theme 'spolsky t))
 
-;; モードラインの影消し
+;; disable shadow on mode line
 (dolist (e '(mode-line mode-line-inactive))
   (set-face-attribute e nil
                       :box `(:color ,(face-background 'mode-line))))

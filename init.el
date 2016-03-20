@@ -1,16 +1,13 @@
-;;;; emacs設定
+;;;; emacs config
 
-
-;; ロードパスの設定
 (add-to-list 'load-path "~/.emacs.d/conf")
 
-;;;; package.el
+;;; auto downloading elisp
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
-;;; パッケージの自動インストール
 (defun auto-install-package (pkg)
   (unless (package-installed-p pkg)
     (package-refresh-contents)
@@ -20,12 +17,7 @@
   (dolist (p pkgs)
     (auto-install-package p)))
 
-
-;;;; basic config
+;;; configurations
 (load "basic")
-
-;;;; 外観の設定
 (load "appearance")
-
-;;;; プログラミング
 (load "dev")

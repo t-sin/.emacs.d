@@ -1,7 +1,7 @@
-;;;; configurations for development
+;;;; config for development
 
 
-;;;; flycheck
+;;; flycheck
 (auto-install-packages '(flycheck
                          flycheck-pos-tip))
 (add-hook 'after-init-hook #'global-flycheck-mode)
@@ -9,21 +9,18 @@
   '(custom-set-variables
     '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
 
-;;;; paredit.el
+;;; paredit-mode
 (auto-install-package 'paredit)
 (require 'paredit)
 
-;;;; auto-complete.el
+(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
+
+;;; auto-complete
 (auto-install-package 'auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 
 
-;;; 各メジャーモードでparedit
-;; Emacs Lisp
-(add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
-;; SLIME
-(add-hook 'slime-lisp-mode-hook 'enable-paredit-mode)
 ;; Clojure
 (add-hook 'clojure-mode-hook 'enacs-paredit-mode)
 

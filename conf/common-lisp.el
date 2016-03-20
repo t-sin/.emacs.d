@@ -1,27 +1,15 @@
-;;;; settings for Common Lisp
-;;;; please load this file in init.el
+;;;; config for Common Lisp
 
-
-;;;; packages for package.el
 (defvar cl-packages '(slime
                       ac-slime))
-
 (auto-install-packages cl-packages)
 
-
-;;;; paredit-mode
-(add-hook 'lisp-mode 'paredit-mode)
-(add-hook 'lisp-interaction-mode-hook 'paredit-mode)
-
-;;;; slime
+;;; slime
 (require 'slime)
 
-(add-hook 'slime-repl-mode-hook 'paredit-mode)
-
-;; 文字コード設定
+;; slime encodings
 (setq slime-net-coding-system 'utf-8-unix)
 
-;; Common Lisp 処理系の設定
 (setq slime-lisp-implementations
       '((sbcl ("ros" "-L" "sbcl-bin" "-Q" "run"))
         (ccl ("ros" "-L" "ccl-bin" "-Q" "run"))
@@ -31,18 +19,23 @@
 
 (setq slime-contribs '(slime-fancy))
 (slime-setup)
-(slime-autodoc-mode) ; カーソル位置の関数情報をミニバッファに表示する
+(slime-autodoc-mode)
 
 
-;;;; hyperspec
+;;; hyperspec
 (setq common-lisp-hyperspec-root
       (concat "file://" "/usr/share/doc/hyperspec/"))
 (setq common-lisp-hyperspec-symbol-table
       (concat common-lisp-hyperspec-root
               "Data/Map_Sym.txt"))
 
+;;; paredit-mode
+(add-hook 'lisp-mode 'enable-paredit-mode)
+(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
+(add-hook 'slime-lisp-mode-hook 'enable-paredit-mode)
+(add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
 
-;;;; auto-complete
+;;; auto-complete
 (add-hook 'slime-mode-hook 'set-up-slime-ac)
 (add-hook 'slime-repl-mode-hook 'set-up-slime-ac)
 (eval-after-load "auto-complete"
