@@ -2,7 +2,7 @@
 
 
 ;;; SKK
-(auto-install-package 'ddskk)
+(el-get-bundle ddskk)
 
 ;;skk-server AquaSKK
 (setq skk-server-portnum 1178)

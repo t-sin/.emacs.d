@@ -42,7 +42,7 @@
 
 
 ;;; colour scheme
-(auto-install-package 'sublime-themes)
+(el-get-bundle sublime-themes)
 
 (when window-system
   (load-theme 'spolsky t))

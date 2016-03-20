@@ -1,7 +1,7 @@
 ;;;; config for Haskell
 
 
-(auto-install-packages '(haskell-mode))
+(el-get-bundle haskell-mode)
 
 ;; major modes for haskell files
 ;; lhs: Literate Haskell; Literate Programming on Haskell

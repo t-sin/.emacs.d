@@ -1,10 +1,9 @@
 ;;;; confg for Clojure
 
 
-(defvar clojure-packages '(clojure-mode
-                           cider
-                           ac-cider))
-(auto-install-packages clojure-packages)
+(el-get-bundle clojure-mode)
+(el-get-bundle cider)
+(el-get-bundle ac-cider)
 
 ;; configure for auto-complete
 (require 'ac-cider)
