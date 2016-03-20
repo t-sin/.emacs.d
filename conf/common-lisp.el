@@ -1,8 +1,8 @@
 ;;;; config for Common Lisp
 
-(defvar cl-packages '(slime
-                      ac-slime))
-(auto-install-packages cl-packages)
+
+(el-get-bundle slime)
+(el-get-bundle ac-slime)
 
 ;;; slime
 (require 'slime)

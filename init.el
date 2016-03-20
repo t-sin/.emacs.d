@@ -1,19 +1,18 @@
 ;;;; emacs config
 
+
 ;;; auto downloading elisp
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
-(package-initialize)
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
 
-(defun auto-install-package (pkg)
-  (unless (package-installed-p pkg)
-    (package-refresh-contents)
-    (package-install pkg)))
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
 
-(defun auto-install-packages (pkgs)
-  (dolist (p pkgs)
-    (auto-install-package p)))
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+
 
 ;;; configurations
 (add-to-list 'load-path "~/.emacs.d/conf")

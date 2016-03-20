@@ -2,21 +2,22 @@
 
 
 ;;; flycheck
-(auto-install-packages '(flycheck
-                         flycheck-pos-tip))
+(el-get-bundle flycheck)
+(el-get-bundle flycheck-pos-tip)
+
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (eval-after-load 'flycheck
   '(custom-set-variables
     '(flycheck-display-errors-function #'flycheck-pos-tip-error-messages)))
 
 ;;; paredit-mode
-(auto-install-package 'paredit)
+(el-get-bundle paredit)
 (require 'paredit)
 
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 
 ;;; auto-complete
-(auto-install-package 'auto-complete)
+(el-get-bundle auto-complete)
 (require 'auto-complete-config)
 (ac-config-default)
 
@@ -27,19 +28,19 @@
 
 
 ;; yaml-mode
-(auto-install-package 'yaml-mode)
+(el-get-bundle yaml-mode)
 (autoload 'yaml-mode "yaml-mode"
   "Major mode for editing YAML files" t)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
 
 ;; json-mode
-(auto-install-package 'json-mode)
+(el-get-bundle json-mode)
 (autoload 'yaml-mode "json-mode"
   "Major mode for editing JSON files" t)
 (add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
 
 ;; js3-mode
-(auto-install-package 'js3-mode)
+(el-get-bundle js3-mode)
 
 
 ;;; Common Lisp
