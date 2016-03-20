@@ -1,4 +1,4 @@
-;;;; Python
+;;;; python
 
 
 (defvar python-packages '(python-mode
