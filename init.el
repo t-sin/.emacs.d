@@ -1,7 +1,5 @@
 ;;;; emacs config
 
-(add-to-list 'load-path "~/.emacs.d/conf")
-
 ;;; auto downloading elisp
 (require 'package)
 (add-to-list 'package-archives
@@ -18,6 +16,8 @@
     (auto-install-package p)))
 
 ;;; configurations
+(add-to-list 'load-path "~/.emacs.d/conf")
+
 (load "basic")
 (load "appearance")
 (load "dev")
