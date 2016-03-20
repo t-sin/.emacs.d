@@ -12,11 +12,6 @@
 ;(global-linum-mode t)
 (setq linum-format "%5d ")
 
-;; selection area with color
-(transient-mark-mode)
-
-(show-paren-mode)
-
 
 ;;; fonts and frames
 (setq frame-size 
