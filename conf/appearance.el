@@ -1,9 +1,10 @@
 ;;;; appearance
 
 
-(tool-bar-mode 0)
-(menu-bar-mode 0)
-(scroll-bar-mode 0)
+(when window-system
+  (tool-bar-mode 0)
+  (menu-bar-mode 0)
+  (scroll-bar-mode 0))
 
 ;; line number in mode line
 (line-number-mode t)
