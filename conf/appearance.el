@@ -6,8 +6,9 @@
   (menu-bar-mode 0)
   (scroll-bar-mode 0))
 
-;; line number in mode line
+;; line and column number in mode line
 (line-number-mode t)
+(column-number-mode t)
 
 ;; line number on left of buffer
 (require 'linum)
