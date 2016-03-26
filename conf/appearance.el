@@ -19,6 +19,10 @@
 ;(global-linum-mode t)
 (setq linum-format "%5d ")
 
+;; powerline
+(el-get-bundle powerline)
+(when window-system
+  (powerline-default-theme))
 
 ;;; fonts and frames
 (setq frame-size 
