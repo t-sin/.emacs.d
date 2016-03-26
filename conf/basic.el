@@ -43,6 +43,13 @@
 (require 'popwin)
 (popwin-mode 1)
 
+;;; visual-regexp
+(el-get-bundle visual-regexp)
+(require 'visual-regexp)
+
+(define-key global-map (kbd "C-c r") 'vr/replace)
+(define-key global-map (kbd "C-c q") 'vr/query-replace)
+
 
 ;;; major modes
 
