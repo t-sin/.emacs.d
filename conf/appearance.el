@@ -6,6 +6,10 @@
   (menu-bar-mode 0)
   (scroll-bar-mode 0))
 
+;; scroll bar
+(el-get-bundle yascroll)
+(global-yascroll-bar-mode)
+
 ;; line and column number in mode line
 (line-number-mode t)
 (column-number-mode t)
