@@ -43,13 +43,5 @@
 
 
 ;;; Common Lisp
-(load "common-lisp")
+;(load "common-lisp")
 
-;;; Clojure
-(load "clojure")
-
-;;; Haskell
-(load "haskell")
-
-;;; Python
-(load "python")
