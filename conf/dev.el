@@ -43,5 +43,5 @@
 
 
 ;;; Common Lisp
-;(load "common-lisp")
+(load "common-lisp")
 
