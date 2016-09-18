@@ -16,6 +16,4 @@
 (add-hook 'haskell-mode-hook 'turn-on-haskell-doc-mode)
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indent)
 
-(setq haskell-program-name "/usr/bin/ghci")
-
-
+(setq haskell-program-name "/usr/bin/stack repl")
