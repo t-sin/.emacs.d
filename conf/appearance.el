@@ -13,6 +13,7 @@
 ;; line and column number in mode line
 (line-number-mode t)
 (column-number-mode t)
+(global-hl-line-mode t)
 
 ;; line number on left of buffer
 (require 'linum)
