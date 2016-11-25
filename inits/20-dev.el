@@ -40,16 +40,3 @@
 
 ;; js3-mode
 (el-get-bundle js3-mode)
-
-
-;;; Common Lisp
-(load "common-lisp")
-
-;;; Clojure
-(load "clojure")
-
-;;; Haskell
-(load "haskell")
-
-;;; Python
-(load "python")
