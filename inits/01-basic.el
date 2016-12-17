@@ -43,6 +43,10 @@
 (require 'popwin)
 (popwin-mode 1)
 
+;;; elscreen
+(el-get-bundle elscreen)
+(elscreen-start)
+
 ;;; visual-regexp
 (el-get-bundle visual-regexp)
 (require 'visual-regexp)
