@@ -31,7 +31,7 @@
 ;;; keys: ex; C-x M-x a -> "\C-x\A-xa"
 ;;; definition: func
 
-(keyboard-translate ?\C-h ?\C-?)
+(define-key key-translation-map [?\C-h] [?\C-?])
 
 
 ;;; PATH from shell
