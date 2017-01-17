@@ -6,6 +6,14 @@
   (menu-bar-mode 0)
   (scroll-bar-mode 0))
 
+;; cool splash screen
+(el-get-bundle dashboard)
+(setq dashboard-banner-logo-title "May the source be with you!")
+(setq dashboard-startup-banner 'official)
+(setq dashboard-items nil)
+
+(dashboard-setup-startup-hook)
+
 ;; scroll bar
 (el-get-bundle yascroll)
 (global-yascroll-bar-mode)
