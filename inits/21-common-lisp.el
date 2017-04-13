@@ -11,13 +11,7 @@
 (setq slime-net-coding-system 'utf-8-unix)
 
 (setq slime-lisp-implementations
-      '((ros ("ros" "-Q" "run"))
-        (ccl ("~/.cim/bin/ccl"))
-        (sbcl ("~/.cim/bin/sbcl"))
-        (ecl ("~/.cim/bin/ecl"))
-        (clisp ("~/.cim/bin/clisp"))
-        (abcl ("~/.cim/bin/abcl"))
-        (allegro ("~/.cim/bin/alisp"))))
+      '((ros ("ros" "-Q" "run"))))
 
 (setq slime-contribs '(slime-fancy))
 (slime-setup)
