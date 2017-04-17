@@ -2,6 +2,7 @@
 
 ;; web-mode
 (el-get-bundle web-mode)
+(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 
 ;; json-mode
 (el-get-bundle json-mode)
