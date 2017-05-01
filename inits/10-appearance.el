@@ -32,6 +32,7 @@
 (when window-system
   (powerline-default-theme))
 
+
 ;;; fonts and frames
 (setq frame-size 
       '((width . 100) (height . 45)))
@@ -62,10 +63,9 @@
 
 ;;; colour scheme
 (el-get-bundle sublime-themes)
-(el-get-bundle suscolors-theme)
 
-(when window-system)
-  (require 'suscolors-theme)
+(when window-system
+  (load-theme 'spolsky t))
 
 ;; disable shadow on mode line
 (dolist (e '(mode-line mode-line-inactive))
