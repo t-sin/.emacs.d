@@ -1,0 +1,10 @@
+.emacs.d for me
+
+** dependency
+
+you must install these packages with apt (and so on...)
+
+- SCMs
+  - git
+  - mercurial-hg
+
