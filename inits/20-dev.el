@@ -1,6 +1,8 @@
 ;;;; config for development
 
 
+(el-get-bundle magit)
+
 ;;; flycheck
 (el-get-bundle flycheck)
 (el-get-bundle flycheck-pos-tip)
