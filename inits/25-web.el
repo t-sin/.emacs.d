@@ -13,3 +13,4 @@
 
 ;; js3-mode
 (el-get-bundle js3-mode)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js3-mode))
