@@ -29,8 +29,8 @@
 
 ;; powerline
 (el-get-bundle powerline)
-(when window-system
-  (powerline-default-theme))
+(setq powerline-default-separator 'bar)
+(powerline-default-theme)
 
 
 ;;; fonts and frames
