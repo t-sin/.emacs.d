@@ -11,13 +11,11 @@
 
 ;;; paredit-mode
 (el-get-bundle paredit)
-(require 'paredit)
 
 (add-hook 'emacs-lisp-mode-hook 'enable-paredit-mode)
 
 ;;; auto-complete
 (el-get-bundle auto-complete)
-(require 'auto-complete-config)
 (ac-config-default)
 
 

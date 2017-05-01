@@ -7,12 +7,12 @@
   (scroll-bar-mode 0))
 
 ;; cool splash screen
-(el-get-bundle dashboard)
-(setq dashboard-banner-logo-title "May the source be with you!")
-(setq dashboard-startup-banner 'official)
-(setq dashboard-items nil)
+;; (el-get-bundle dashboard)
+;; (setq dashboard-banner-logo-title "May the source be with you!")
+;; (setq dashboard-startup-banner 'official)
+;; (setq dashboard-items nil)
 
-(dashboard-setup-startup-hook)
+;; (dashboard-setup-startup-hook)
 
 ;; scroll bar
 (el-get-bundle yascroll)
@@ -24,7 +24,6 @@
 (global-hl-line-mode t)
 
 ;; line number on left of buffer
-(require 'linum)
 ;(global-linum-mode t)
 (setq linum-format "%5d ")
 
@@ -63,9 +62,10 @@
 
 ;;; colour scheme
 (el-get-bundle sublime-themes)
+(el-get-bundle suscolors-theme)
 
-(when window-system
-  (load-theme 'spolsky t))
+(when window-system)
+  (require 'suscolors-theme)
 
 ;; disable shadow on mode line
 (dolist (e '(mode-line mode-line-inactive))

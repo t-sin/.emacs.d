@@ -6,7 +6,6 @@
 (el-get-bundle ac-cider)
 
 ;; configure for auto-complete
-(require 'ac-cider)
 (add-hook 'cider-mode-hook 'ac-flyspell-workaround)
 (add-hook 'cider-mode-hook 'ac-cider-setup)
 (add-hook 'cider-repl-mode-hook 'ac-cider-setup)

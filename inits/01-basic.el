@@ -40,7 +40,6 @@
 
 ;;; popwin.el
 (el-get-bundle popwin)
-(require 'popwin)
 (popwin-mode 1)
 
 ;;; elscreen
@@ -49,7 +48,6 @@
 
 ;;; visual-regexp
 (el-get-bundle visual-regexp)
-(require 'visual-regexp)
 
 (define-key global-map (kbd "C-M-%") 'vr/replace)
 (define-key global-map (kbd "M-%") 'vr/query-replace)
@@ -59,7 +57,6 @@
 
 ;; markdown-mode
 (el-get-bundle markdown-mode)
-(require 'markdown-mode)
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))

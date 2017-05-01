@@ -4,7 +4,6 @@
 (el-get-bundle python-mode)
 (el-get-bundle flycheck-pyflakes)
 
-(require 'python-mode)
 (add-hook 'python-mode-hook
           '(lambda ()
              (setq indent-level 4)
