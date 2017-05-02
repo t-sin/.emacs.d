@@ -40,6 +40,7 @@
 
 ;;; popwin.el
 (el-get-bundle popwin)
+(require 'popwin)
 (popwin-mode 1)
 
 ;;; elscreen
