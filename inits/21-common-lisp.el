@@ -25,11 +25,11 @@
       (concat common-lisp-hyperspec-root
               "Data/Map_Sym.txt"))
 
-;;; paredit-mode
-(add-hook 'lisp-mode-hook 'enable-paredit-mode)
-(add-hook 'lisp-interaction-mode-hook 'enable-paredit-mode)
-(add-hook 'slime-lisp-mode-hook 'enable-paredit-mode)
-(add-hook 'slime-repl-mode-hook 'enable-paredit-mode)
+;;; parinfer-mode
+(add-hook 'lisp-interaction-mode-hook #'parinfer-mode)
+(add-hook 'slime-lisp-mode-hook #'parinfer-mode)
+(add-hook 'slime-repl-mode-hook #'parinfer-mode)
+
 
 ;;; auto-complete
 (add-hook 'slime-mode-hook 'set-up-slime-ac)

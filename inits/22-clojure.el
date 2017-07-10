@@ -14,9 +14,9 @@
      (add-to-list 'ac-modes 'cider-mode)
      (add-to-list 'ac-modes 'cider-repl-mode)))
 
-;; paredit-mode
-(add-hook 'clojure-mode-hook 'enable-paredit-mode)
-(add-hook 'cider-repl-mode-hook 'enable-paredit-mode)
+;; parinfer-mode
+(add-hook 'clojure-mode-hook #'parinfer-mode)
+(add-hook 'cider-repl-mode-hook #'parinfer-mode)
 
 (defun set-auto-complete-as-completion-at-point-function ()
   (setq completion-at-point-functions '(auto-complete)))
