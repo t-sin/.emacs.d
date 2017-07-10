@@ -4,9 +4,6 @@
 (el-get-bundle slime)
 (el-get-bundle ac-slime)
 
-;;; slime
-; (require 'slime)
-
 ;; slime encodings
 (setq slime-net-coding-system 'utf-8-unix)
 
