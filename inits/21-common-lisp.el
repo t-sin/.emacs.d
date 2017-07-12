@@ -23,9 +23,10 @@
               "Data/Map_Sym.txt"))
 
 ;;; parinfer-mode
-(add-hook 'lisp-interaction-mode-hook #'parinfer-mode)
 (add-hook 'slime-lisp-mode-hook #'parinfer-mode)
-(add-hook 'slime-repl-mode-hook #'parinfer-mode)
+;; I think REPL is not working good with parinfer
+(add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+(add-hook 'slime-repl-mode-hook #'enable-paredit-mode)
 
 
 ;;; auto-complete
