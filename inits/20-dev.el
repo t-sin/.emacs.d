@@ -44,3 +44,9 @@
 (autoload 'yaml-mode "yaml-mode"
   "Major mode for editing YAML files" t)
 (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))
+
+;; nim-mode
+(el-get-bundle nim-mode)
+(autoload 'nim-mode ”nim-mode"
+  "Major mode for editing Nim sources" t)
+(add-to-list 'auto-mode-alist '("\\.nim\\'" . nim-mode))
