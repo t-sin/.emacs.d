@@ -42,16 +42,24 @@
 
 (defun set-fonts (size jp &optional en)
   (when window-system
-    ;; English font
     (set-face-attribute
      'default nil
      :family en
      :height (truncate (* 10 size)))
-    ;; Japanese font
     (set-fontset-font
-     (frame-parameter nil 'font)
+     nil
      'japanese-jisx0208
      (cons jp "unicode-bmp"))
+    ;; Display nice Emoji
+    (dolist (range '((#x2700 . #x27BF)
+                     (#x1F650 . #x1F67F)
+                     (#x1F600 . #x1F64F)
+                     (#x2600 . #x26FF)
+                     (#x1F300 . #x1F5FF)
+                     (#x1F900 . #x1F9FF)
+                     (#x1F680 . #x1F6FF)))
+      (set-fontset-font
+        nil range (font-spec :family "Noto Emoji")))
     ;; en-jp font size ratio
     (setq face-font-rescale-alist
           '(((concat ".*" jp ".*" . 1))))))
