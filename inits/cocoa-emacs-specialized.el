@@ -6,7 +6,7 @@
 
 
 ;;; font and theme settings. see 10-appearance.el
-(set-fonts 17 font-jp font-en)
+(set-fonts 14 font-jp font-en)
 
 (el-get-bundle color-theme-solarized)
 (el-get-bundle suscolors-theme)
