@@ -61,3 +61,8 @@
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
+
+;; Re:VIEW mode
+(el-get-bundle kmuto/review-el)
+(require 'review-mode)
+(add-to-list 'auto-mode-alist '("\\.re\\'" . review-mode))
