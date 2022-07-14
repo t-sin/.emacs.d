@@ -1,3 +1,6 @@
 [submodule "dependency/emacs-color-themes"]
 	path = dependency/emacs-color-themes
 	url = https://github.com/owainlewis/emacs-color-themes
+[submodule "dependency/paredit"]
+	path = dependency/paredit
+	url = https://github.com/emacsmirror/paredit

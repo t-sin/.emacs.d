@@ -1,4 +1,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; utility
+
+(defun depends-on (path)
+  (concat user-emacs-directory "dependency" path))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; basic config
 
 (setq inhibit-startup-message t)
@@ -44,7 +50,7 @@
 ;; spolsky theme
 (when window-system
   (add-to-list 'custom-theme-load-path
-               (concat user-emacs-directory "/dependency/emacs-color-themes/themes"))
+               (depends-on "/emacs-color-themes/themes"))
   (load-theme 'spolsky t))
 
 ;; line/column numbers in the mode line
@@ -62,3 +68,13 @@
 ;;   3. "Options"->"Save options"
 (custom-set-faces
  '(default ((t (:family "Ricty" :foundry "PfEd" :slant normal :weight normal :height 120 :width normal)))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; software development
+
+;; magit
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; common lisp
+
+(require 'paredit (depends-on "/paredit/paredit.el"))
