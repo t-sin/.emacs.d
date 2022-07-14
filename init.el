@@ -1,26 +1,39 @@
-;;;; emacs config
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; basic config
 
+(setq inhibit-startup-message t)
 
-;;; auto downloading elisp
+;; encodings
+(set-language-environment "utf-8")
+;(prefer-coding-system 'utf-8)
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-;(package-initialize)
+;; indent with spaces
+(setq-default indent-tabs-mode nil)
+(setq-default tab-width 4 indent-tabs-mode nil)
 
-(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+;; selection behavior
+(cua-mode t)
+(setq cua-enable-cua-keys nil)
 
-(unless (require 'el-get nil 'noerror)
-  (with-current-buffer
-      (url-retrieve-synchronously
-       "https://raw.githubusercontent.com/dimitri/el-get/master/el-get-install.el")
-    (goto-char (point-max))
-    (eval-print-last-sexp)))
+;; selection area with color
+(transient-mark-mode)
 
-(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+;; killring and clipboard
+(if window-system
+  (setq x-select-enable-clipboard t))
 
-(el-get-bundle init-loader)
+;; show correspond paren
+(show-paren-mode)
 
-(setf init-loader-show-log-after-init nil)
-(init-loader-load "~/.emacs.d/inits")
+;;; keybinding syntax
+;;; sypnosis: (define-key keymap keys definition)
+;;; keymap: global-map, xxx-mode-map...
+;;; keys: ex; C-x M-x a -> "\C-x\A-xa"
+;;; definition: func
+
+(define-key key-translation-map [?\C-h] [?\C-?])
+
+;; disable bars
+(when window-system
+  (tool-bar-mode 0)
+  (menu-bar-mode 0))
