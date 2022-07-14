@@ -77,4 +77,14 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; common lisp
 
-(require 'paredit (depends-on "/paredit/paredit.el"))
+(add-to-list 'load-path (depends-on "/paredit"))
+(require 'paredit)
+
+(setq slime-net-coding-system 'utf-8-unix)
+(setq slime-lisp-implementations
+      '((ros ("ros" "-Q" "run"))))
+
+(setq slime-c3ontribs '(slime-fancy))
+(add-to-list 'load-path (depends-on "/slime"))
+(require 'slime-autoloads)
+;;(slime-autodoc-mode)

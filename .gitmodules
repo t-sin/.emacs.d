@@ -4,3 +4,6 @@
 [submodule "dependency/paredit"]
 	path = dependency/paredit
 	url = https://github.com/emacsmirror/paredit
+[submodule "dependency/slime"]
+	path = dependency/slime
+	url = https://github.com/slime/slime
