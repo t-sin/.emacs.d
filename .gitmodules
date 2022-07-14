@@ -1,0 +1,3 @@
+[submodule "dependency/emacs-color-themes"]
+	path = dependency/emacs-color-themes
+	url = https://github.com/owainlewis/emacs-color-themes

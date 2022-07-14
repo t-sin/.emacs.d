@@ -1,4 +1,4 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; basic config
 
 (setq inhibit-startup-message t)
@@ -37,3 +37,11 @@
 (when window-system
   (tool-bar-mode 0)
   (menu-bar-mode 0))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; appearance
+
+(add-to-list 'custom-theme-load-path
+             (concat user-emacs-directory "/dependency/emacs-color-themes/themes"))
+(load-theme 'spolsky t)
