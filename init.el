@@ -42,6 +42,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; appearance
 
+;; spolsky theme
 (add-to-list 'custom-theme-load-path
              (concat user-emacs-directory "/dependency/emacs-color-themes/themes"))
 (load-theme 'spolsky t)
+
+;; line/column numbers in the mode line
+(line-number-mode t)
+(column-number-mode t)
+(global-hl-line-mode t)
