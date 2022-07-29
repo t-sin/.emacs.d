@@ -7,3 +7,6 @@
 [submodule "dependency/slime"]
 	path = dependency/slime
 	url = https://github.com/slime/slime
+[submodule "dependency/markdown-mode"]
+	path = dependency/markdown-mode
+	url = https://github.com/jrblevin/markdown-mode
