@@ -71,6 +71,17 @@
  '(default ((t (:family "Ricty" :foundry "PfEd" :slant normal :weight normal :height 120 :width normal)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; packages
+
+(require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
+(eval-when-compile
+  (add-to-list 'load-path (depends-on "/use-package"))
+  (require 'use-package))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; software development
 
 ;; markdown mode
@@ -106,3 +117,38 @@
 (require 'cargo)
 
 (add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
+(add-hook 'rust-mode-hook #'lsp)
+
+(defun cargo-project-p (_)
+  (let (dir)
+    (ignore-errors
+      (let* ((output (shell-command-to-string "cargo metadata --no-deps --format-version 1"))
+	     (js (json-read-from-string output)))
+	(setq dir (cdr (assq 'workspace_root js)))))
+    (and dir (cons 'transient  dir))))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; company
+
+(use-package company :ensure t)
+(add-hook 'after-init-hook '(lambda ()
+                              ;;(global-company-mode)
+                              (delete 'company-preview-if-just-one-frontend company-frontends)
+                              (define-key company-active-map (kbd "C-h") 'backward-delete-char)))
+
+(use-package company-quickhelp
+  :ensure t
+  :config (company-quickhelp-mode))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; lsp
+
+(use-package lsp-mode
+  :ensure t
+  :init (setq lsp-keymap-prefix "C-c l")
+  :hook ((rust-mode . (lambda () (if (cargo-project-p ()) (lsp))))
+         (lsp-mode . lsp-enable-which-key-integration))
+  :bind ("C-c h" . lsp-describe-thing-at-point))
+(use-package lsp-ui
+  :ensure t
+  :commands lsp-ui-mode)
