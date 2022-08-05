@@ -10,3 +10,9 @@
 [submodule "dependency/markdown-mode"]
 	path = dependency/markdown-mode
 	url = https://github.com/jrblevin/markdown-mode
+[submodule "dependency/cargo.el"]
+	path = dependency/cargo.el
+	url = https://github.com/kwrooijen/cargo.el
+[submodule "dependency/rust-mode"]
+	path = dependency/rust-mode
+	url = https://github.com/rust-lang/rust-mode

@@ -96,3 +96,13 @@
 (add-to-list 'load-path (depends-on "/slime"))
 (require 'slime-autoloads)
 ;;(slime-autodoc-mode)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; rust
+
+(add-to-list 'load-path (depends-on "/rust-mode"))
+(require 'rust-mode)
+(add-to-list 'load-path (depends-on "/cargo.el"))
+(require 'cargo)
+
+(add-to-list 'auto-mode-alist '("\\.rs\\'" . rust-mode))
