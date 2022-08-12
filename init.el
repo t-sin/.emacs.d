@@ -45,6 +45,17 @@
   (menu-bar-mode 0))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;; packages
+
+(require 'package)
+(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+(package-initialize)
+
+(eval-when-compile
+  (add-to-list 'load-path (depends-on "/use-package"))
+  (require 'use-package))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; appearance
 
 ;; spolsky theme
@@ -70,16 +81,10 @@
 (custom-set-faces
  '(default ((t (:family "Ricty" :foundry "PfEd" :slant normal :weight normal :height 120 :width normal)))))
 
-;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;; packages
-
-(require 'package)
-(add-to-list 'package-archives '("melpa-stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
-
-(eval-when-compile
-  (add-to-list 'load-path (depends-on "/use-package"))
-  (require 'use-package))
+;; elscreen
+(use-package elscreen
+  :ensure t
+  :init (elscreen-start))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;; software development
